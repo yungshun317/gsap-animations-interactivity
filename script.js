@@ -15,3 +15,21 @@ window.addEventListener("mousemove", function(e) {
     gsap.to("#space2", { duration: 1, x: -e.pageX / 5 });
     gsap.to("#plane", { duration: 1, x: -e.pageX / 2.5 });
 }, false);
+
+document.addEventListener("click", function(e) {
+    gsap.to("#body", {
+        duration: 0.15,
+        y: -60,
+        repeat: 1,
+        yoyo: true,
+        ease: "power1.out"
+    });
+
+    gsap.to("#head", {
+        duration: 0.18,
+        y: -70,
+        repeat: 1,
+        yoyo: true,
+        ease: "power3.out"
+    });
+}, false)
